@@ -56,7 +56,7 @@ sequenceDiagram
 
 ### 1. Authentication Packet
 *   **Request Frame (Client ➔ Server):** `LOGIN:<username>:<password>`
-    *   *Example:* `LOGIN:Youssef Ebrahim:Youssef_12345`
+    *   *Example:* `LOGIN:Youssef Ebrahim:Youssef_33263051`
 *   **Response Frame (Server ➔ Client):** `SUCCESS` or `FAIL`
 
 ### 2. Checkout Packet
@@ -181,7 +181,7 @@ The project features a **fully-automated build pipeline** that compiles the code
 
 > 💡 **Notice for Evaluation:** Default developer credentials are defined in `GroceryServer.java` (lines 17-18):
 *   **Username:** `Youssef Ebrahim`
-*   **Password:** `Youssef_12345`
+*   **Password:** `Youssef_33263051`
 
 ---
 

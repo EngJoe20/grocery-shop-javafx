@@ -14,7 +14,7 @@
 AppName={#AppName}
 AppVersion={#AppVersion}
 AppPublisher={#AppPublisher}
-AppContact=Youssef_12345
+AppContact=Youssef_33263051
 DefaultDirName={autopf}\JoeMarket
 DefaultGroupName={#AppName}
 UninstallDisplayIcon={app}\icon.ico
