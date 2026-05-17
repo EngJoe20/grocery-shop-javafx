@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<BorderPane xmlns:fx="http://javafx.com/fxml"
+            fx:controller="client.ShopController"
+            stylesheets="@styles.css"
+            styleClass="shop-root">
+
+    <!-- ══ TOP APP BAR ══ -->
+    <top>
+        <HBox styleClass="app-bar" alignment="CENTER_LEFT" spacing="12">
+            <ImageView fitWidth="36" fitHeight="36" preserveRatio="true">
+                <image>
+                    <Image url="@images/icon.png"/>
+                </image>
+            </ImageView>
+            <VBox spacing="1">
+                <Label text="Joe Market" styleClass="appbar-title"/>
+                <Label text="Select your groceries" styleClass="appbar-sub"/>
+            </VBox>
+            <Region HBox.hgrow="ALWAYS"/>
+            
+            <!-- Upgraded Options Dropdown Menu -->
+            <MenuButton text="Options  ⚙️" styleClass="menu-options">
+                <items>
+                    <MenuItem text="Reset Daily Sales  🔄" onAction="#handleResetSales"/>
+                    <MenuItem text="Logout  🚪" onAction="#handleLogout"/>
+                </items>
+            </MenuButton>
+        </HBox>
+    </top>
+
+    <!-- ══ ITEMS GRID ══ -->
+    <center>
+        <ScrollPane fitToWidth="true" styleClass="scroll-pane">
+            <VBox spacing="24" style="-fx-padding: 32 32 16 32;">
+                
+                <!-- Category Header -->
+                <VBox spacing="4">
+                    <Label text="Fresh Produce" styleClass="category-title"/>
+                    <Label text="Handpicked organic fruits and vegetables just for you" styleClass="category-sub"/>
+                </VBox>
+
+                <!-- Items Grid -->
+                <GridPane hgap="22" vgap="22" alignment="CENTER">
+
+                    <!-- ── Row 0 ── -->
+                    <!-- Apples -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/apples.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Apples"     styleClass="item-name"/>
+                        <Label text="20 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decApples" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyApples" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incApples" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Banana -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/banana.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Banana"     styleClass="item-name"/>
+                        <Label text="30 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decBanana" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyBanana" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incBanana" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Oranges -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/oranges.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Oranges"    styleClass="item-name"/>
+                        <Label text="10 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decOranges" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyOranges" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incOranges" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- ── Row 1 ── -->
+                    <!-- Tomatoes -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/tomatoes.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Tomatoes"   styleClass="item-name"/>
+                        <Label text="15 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decTomatoes" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyTomatoes" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incTomatoes" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Potatoes -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/potatoes.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Potatoes"   styleClass="item-name"/>
+                        <Label text="12 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decPotatoes" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyPotatoes" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incPotatoes" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                    <!-- Grapes -->
+                    <VBox styleClass="item-card" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                        <ImageView fitWidth="120" fitHeight="120" preserveRatio="true" styleClass="item-image">
+                            <image>
+                                <Image url="@images/grapes.png"/>
+                            </image>
+                        </ImageView>
+                        <Label text="Grapes"     styleClass="item-name"/>
+                        <Label text="25 LE / Kg" styleClass="item-price"/>
+                        
+                        <!-- Custom counter layout with editable TextField -->
+                        <HBox alignment="CENTER" spacing="12">
+                            <Button text="-" onAction="#decGrapes" styleClass="btn-qty-dec"/>
+                            <TextField fx:id="lblQtyGrapes" text="0" styleClass="lbl-qty-val"/>
+                            <Button text="+" onAction="#incGrapes" styleClass="btn-qty-inc"/>
+                        </HBox>
+                    </VBox>
+
+                </GridPane>
+            </VBox>
+        </ScrollPane>
+    </center>
+
+    <!-- ══ BOTTOM CHECKOUT BAR ══ -->
+    <bottom>
+        <HBox fx:id="bottomBar" styleClass="checkout-bar"
+              alignment="CENTER_RIGHT" spacing="16">
+            <Button text="Daily Sales  📊" onAction="#handleShowSales" styleClass="btn-sales"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label fx:id="totalLabel" text="Total:  0.00  LE"
+                   styleClass="total-label"/>
+            <Button fx:id="checkoutBtn" text="Checkout  ✓"
+                    onAction="#handleCheckout"
+                    styleClass="btn-checkout"/>
+        </HBox>
+    </bottom>
+
+</BorderPane>

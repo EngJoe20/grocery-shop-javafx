@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+
+<StackPane xmlns:fx="http://javafx.com/fxml"
+           fx:controller="client.LoginController"
+           stylesheets="@styles.css"
+           prefWidth="460" prefHeight="560"
+           styleClass="root-bg">
+
+    <!-- Background decorative circles -->
+    <Pane mouseTransparent="true">
+        <Region styleClass="deco-circle-1"/>
+        <Region styleClass="deco-circle-2"/>
+    </Pane>
+
+    <!-- Card -->
+    <VBox fx:id="card" styleClass="login-card"
+          alignment="CENTER" spacing="0"
+          maxWidth="380" maxHeight="490">
+
+        <!-- Icon + heading -->
+        <ImageView fitWidth="90" fitHeight="90" preserveRatio="true">
+            <image>
+                <Image url="@images/icon.png"/>
+            </image>
+        </ImageView>
+        <Region prefHeight="10"/>
+        <Label text="Joe Market" styleClass="brand-title"/>
+        <Label text="Sign in to your account" styleClass="brand-sub"/>
+
+        <Region prefHeight="26"/>
+
+        <!-- Form fields VBox (Aligned Left) -->
+        <VBox alignment="CENTER_LEFT" spacing="0" maxWidth="Infinity">
+            
+            <!-- Username Label & Input -->
+            <Label text="USERNAME" styleClass="field-label"/>
+            <TextField fx:id="usernameField"
+                       promptText="Your full name"
+                       styleClass="md-input"
+                       maxWidth="Infinity"/>
+
+            <Region prefHeight="18"/>
+
+            <!-- Password Label & Stack Input -->
+            <Label text="PASSWORD" styleClass="field-label"/>
+            <StackPane alignment="CENTER_RIGHT" maxWidth="Infinity">
+                
+                <!-- Password Masked Field -->
+                <PasswordField fx:id="passwordField"
+                               promptText="FirstName_ID"
+                               styleClass="md-input"
+                               style="-fx-padding: 12 40 12 16;"
+                               maxWidth="Infinity"/>
+                
+                <!-- Password Plain text Field (Initially Hidden) -->
+                <TextField fx:id="passwordTextField"
+                           promptText="FirstName_ID"
+                           styleClass="md-input"
+                           style="-fx-padding: 12 40 12 16;"
+                           maxWidth="Infinity"
+                           visible="false"/>
+                
+                <!-- Custom Eye Toggle Button -->
+                <Button fx:id="togglePasswordBtn"
+                        text="👁"
+                        onAction="#handleTogglePassword"
+                        styleClass="btn-toggle-password"
+                        focusTraversable="false"/>
+            </StackPane>
+        </VBox>
+
+        <!-- Message -->
+        <Label fx:id="messageLabel" text="" wrapText="true"
+               maxWidth="320" styleClass="msg-hidden"
+               style="-fx-padding: 10 0 0 0;"/>
+
+        <Region prefHeight="24"/>
+
+        <!-- Button -->
+        <Button fx:id="loginBtn" text="Sign In"
+                onAction="#handleLogin"
+                styleClass="btn-primary"
+                maxWidth="Infinity"/>
+
+        <VBox.margin>
+            <Insets top="0" right="40" bottom="40" left="40"/>
+        </VBox.margin>
+    </VBox>
+
+</StackPane>

@@ -1,0 +1,458 @@
+/* ═══════════════════════════════════════════════════════════
+   Joe Market — Modern Premium Organic Design
+   Palette: Fresh Forest Green (#008060), Warm Alabaster (#FAF9F6)
+   Font: Google Font "Outfit" for high-fidelity typography
+   ═══════════════════════════════════════════════════════════ */
+
+/* --- Google Fonts --- */
+@import url("https://fonts.googleapis.com/css2?family=Aldrich&display=swap");
+
+.root {
+    -fx-font-family: "Aldrich", "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+}
+
+/* ── Root / Background ─────────────────────────────────── */
+.root-bg {
+    -fx-background-color: linear-gradient(to bottom right, #FAF9F6, #E5ECE9);
+}
+.shop-root {
+    -fx-background-color: #FAF9F6;
+}
+
+/* Decorative background circles on login (soft glowing gradients) */
+.deco-circle-1 {
+    -fx-background-color: linear-gradient(to bottom right, #80CBC4, #A5D6A7);
+    -fx-background-radius: 50%;
+    -fx-min-width: 350;
+    -fx-min-height: 350;
+    -fx-translate-x: -180;
+    -fx-translate-y: -160;
+    -fx-opacity: 0.35;
+    -fx-effect: innershadow(gaussian, rgba(255,255,255,0.4), 20, 0, 0, 0);
+}
+.deco-circle-2 {
+    -fx-background-color: linear-gradient(to bottom right, #A5D6A7, #FFE082);
+    -fx-background-radius: 50%;
+    -fx-min-width: 250;
+    -fx-min-height: 250;
+    -fx-translate-x: 200;
+    -fx-translate-y: 220;
+    -fx-opacity: 0.25;
+    -fx-effect: innershadow(gaussian, rgba(255,255,255,0.4), 15, 0, 0, 0);
+}
+
+/* ── Login Card ─────────────────────────────────────────── */
+.login-card {
+    -fx-background-color: rgba(255, 255, 255, 0.9);
+    -fx-background-radius: 30;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 80, 60, 0.12), 40, 0, 0, 10);
+    -fx-padding: 44 40 44 40;
+    -fx-border-color: rgba(255, 255, 255, 0.8);
+    -fx-border-width: 1.5;
+    -fx-border-radius: 30;
+}
+.login-card:hover {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 80, 60, 0.18), 45, 0, 0, 12);
+}
+
+.brand-icon {
+    -fx-font-size: 56px;
+    -fx-padding: 0 0 10 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 96, 0.25), 10, 0, 0, 4);
+}
+.brand-title {
+    -fx-font-family: "Aldrich", sans-serif;
+    -fx-font-size: 34px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #005C42; /* Forest Emerald */
+}
+.brand-sub {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #5C756B; /* Sage Slate */
+    -fx-padding: 6 0 0 0;
+}
+
+/* ── Fields ─────────────────────────────────────────────── */
+.field-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #008060;
+    -fx-letter-spacing: 1.2px;
+    -fx-padding: 0 0 6 2;
+}
+.md-input {
+    -fx-background-color: #F4F7F5;
+    -fx-background-radius: 14;
+    -fx-border-color: #D3E0D8;
+    -fx-border-radius: 14;
+    -fx-border-width: 1.5;
+    -fx-padding: 12 16 12 16;
+    -fx-font-size: 14.5px;
+    -fx-text-fill: #1E2A22;
+    -fx-prompt-text-fill: #8E9F94;
+}
+.md-input:focused {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #008060;
+    -fx-border-width: 2;
+}
+
+/* ── Messages ───────────────────────────────────────────── */
+.msg-hidden {
+    -fx-text-fill: transparent;
+}
+.msg-error {
+    -fx-text-fill: #D32F2F;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+.msg-warn {
+    -fx-text-fill: #F57C00;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+.msg-ok {
+    -fx-text-fill: #388E3C;
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+}
+
+/* ── Primary Button ─────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: linear-gradient(to right, #008060, #009673);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 100;
+    -fx-padding: 14 0 14 0;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 96, 0.3), 15, 0, 0, 4);
+}
+.btn-primary:hover {
+    -fx-background-color: linear-gradient(to right, #009673, #00AB83);
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 96, 0.45), 18, 0, 0, 5);
+}
+.btn-primary:pressed {
+    -fx-background-color: #006E52;
+}
+.btn-primary:disabled {
+    -fx-background-color: #DCE3DF;
+    -fx-text-fill: #8E9F94;
+    -fx-effect: none;
+}
+
+/* ── App Bar ────────────────────────────────────────────── */
+.app-bar {
+    -fx-background-color: linear-gradient(to right, #005C42, #008060);
+    -fx-padding: 18 28 18 28;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.12), 12, 0, 0, 3);
+}
+.appbar-title {
+    -fx-font-family: "Aldrich", sans-serif;
+    -fx-font-size: 20px;
+    -fx-font-weight: 700;
+    -fx-text-fill: white;
+}
+.appbar-sub {
+    -fx-font-size: 12px;
+    -fx-text-fill: #C2E2D6;
+}
+
+/* ── Scroll pane ────────────────────────────────────────── */
+.scroll-pane {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+}
+.scroll-pane > .viewport {
+    -fx-background-color: transparent;
+}
+
+/* ── Items Grid ─────────────────────────────────────────── */
+.items-grid {
+    -fx-padding: 32 32 32 32;
+}
+.category-title {
+    -fx-font-family: "Aldrich", sans-serif;
+    -fx-font-size: 24px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #005C42;
+}
+.category-sub {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #5C756B;
+}
+
+/* ── Item Card ──────────────────────────────────────────── */
+.item-card {
+    -fx-background-color: white;
+    -fx-background-radius: 26;
+    -fx-padding: 28 22 28 22;
+    -fx-alignment: CENTER;
+    -fx-spacing: 8;
+    -fx-min-width: 240;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 80, 60, 0.04), 16, 0, 0, 4);
+    -fx-border-color: #EAEBE6;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 26;
+    -fx-cursor: hand;
+}
+.item-card:hover {
+    -fx-background-color: #FFFFFF;
+    -fx-border-color: #008060;
+    -fx-border-width: 1.5;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 128, 96, 0.15), 24, 0, 0, 8);
+    -fx-scale-x: 1.03;
+    -fx-scale-y: 1.03;
+}
+
+.item-emoji {
+    -fx-font-size: 54px;
+    -fx-padding: 0 0 6 0;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.05), 5, 0, 0, 2);
+}
+.item-name {
+    -fx-font-size: 16px;
+    -fx-font-weight: 600;
+    -fx-text-fill: #1E2A22;
+}
+.item-price {
+    -fx-font-size: 13.5px;
+    -fx-text-fill: #008060;
+    -fx-font-weight: 700;
+    -fx-padding: 0 0 10 0;
+}
+
+/* ── Quantity Spinner ───────────────────────────────────── */
+.qty-spinner {
+    -fx-background-color: #F4F7F5;
+    -fx-border-color: #D3E0D8;
+    -fx-border-radius: 12;
+    -fx-background-radius: 12;
+    -fx-border-width: 1.5;
+}
+.qty-spinner:focused {
+    -fx-border-color: #008060;
+}
+.qty-spinner .text-field {
+    -fx-background-color: transparent;
+    -fx-font-size: 14px;
+    -fx-font-weight: 600;
+    -fx-alignment: CENTER;
+    -fx-text-fill: #1E2A22;
+}
+.qty-spinner .increment-arrow-button,
+.qty-spinner .decrement-arrow-button {
+    -fx-background-color: transparent;
+    -fx-background-radius: 12;
+    -fx-cursor: hand;
+}
+.qty-spinner .increment-arrow-button:hover,
+.qty-spinner .decrement-arrow-button:hover {
+    -fx-background-color: #E2ECE9;
+}
+.qty-spinner .increment-arrow-button:pressed,
+.qty-spinner .decrement-arrow-button:pressed {
+    -fx-background-color: #C2E2D6;
+}
+
+/* ── Checkout Bar ───────────────────────────────────────── */
+.checkout-bar {
+    -fx-background-color: white;
+    -fx-padding: 22 36 22 36;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 20, 0, 0, -5);
+    -fx-border-color: #EAEBE6 transparent transparent transparent;
+    -fx-border-width: 1.5;
+}
+.total-label {
+    -fx-font-size: 22px;
+    -fx-font-weight: 700;
+    -fx-text-fill: #005C42;
+}
+.btn-checkout {
+    -fx-background-color: linear-gradient(to right, #008060, #009673);
+    -fx-text-fill: white;
+    -fx-font-size: 15px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 100;
+    -fx-padding: 13 36 13 36;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 96, 0.3), 15, 0, 0, 4);
+}
+.btn-checkout:hover {
+    -fx-background-color: linear-gradient(to right, #009673, #00AB83);
+    -fx-effect: dropshadow(gaussian, rgba(0, 128, 96, 0.45), 18, 0, 0, 5);
+}
+.btn-checkout:pressed {
+    -fx-background-color: #006E52;
+}
+.btn-checkout:disabled {
+    -fx-background-color: #DCE3DF;
+    -fx-text-fill: #8E9F94;
+    -fx-effect: none;
+}
+
+/* ── Modern Custom ScrollBar ────────────────────────────── */
+.scroll-pane .scroll-bar:vertical {
+    -fx-background-color: transparent;
+    -fx-width: 8;
+    -fx-padding: 0;
+}
+.scroll-pane .scroll-bar:vertical .thumb {
+    -fx-background-color: #D3E0D8;
+    -fx-background-radius: 4;
+}
+.scroll-pane .scroll-bar:vertical .thumb:hover {
+    -fx-background-color: #B2D8D0;
+}
+.scroll-pane .scroll-bar:vertical .track,
+.scroll-pane .scroll-bar:vertical .increment-button,
+.scroll-pane .scroll-bar:vertical .decrement-button {
+    -fx-background-color: transparent;
+}
+
+/* ── Item Image ─────────────────────────────────────────── */
+.item-image {
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 0, 0, 0.08), 12, 0, 0, 4);
+}
+
+/* ── App Bar Dropdown Menu Button ───────────────────────── */
+.menu-options {
+    -fx-background-color: rgba(255, 255, 255, 0.15);
+    -fx-text-fill: white;
+    -fx-font-size: 13px;
+    -fx-font-weight: 600;
+    -fx-background-radius: 10;
+    -fx-padding: 6 16 6 16;
+    -fx-cursor: hand;
+    -fx-border-color: rgba(255, 255, 255, 0.3);
+    -fx-border-width: 1;
+    -fx-border-radius: 10;
+}
+.menu-options:hover {
+    -fx-background-color: rgba(255, 255, 255, 0.28);
+    -fx-border-color: rgba(255, 255, 255, 0.6);
+}
+.menu-options:showing {
+    -fx-background-color: rgba(255, 255, 255, 0.1);
+}
+.menu-options .label {
+    -fx-text-fill: white;
+}
+.menu-options .context-menu {
+    -fx-background-color: white;
+    -fx-background-radius: 12;
+    -fx-effect: dropshadow(three-pass-box, rgba(0, 80, 60, 0.12), 15, 0, 0, 5);
+    -fx-padding: 6 0 6 0;
+    -fx-border-color: #EAEBE6;
+    -fx-border-width: 1;
+    -fx-border-radius: 12;
+}
+.menu-options .menu-item {
+    -fx-padding: 8 18 8 18;
+}
+.menu-options .menu-item .label {
+    -fx-text-fill: #1E2A22;
+    -fx-font-family: "Outfit";
+    -fx-font-size: 13.5px;
+}
+.menu-options .menu-item:hover,
+.menu-options .menu-item:focused {
+    -fx-background-color: #E2ECE9;
+}
+
+/* ── Custom Quantity Selector Buttons ───────────────────── */
+.btn-qty-dec {
+    -fx-background-color: #FFEBEE;
+    -fx-text-fill: #C62828;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-max-width: 34;
+    -fx-max-height: 34;
+    -fx-cursor: hand;
+    -fx-padding: 0 0 2 0;
+    -fx-alignment: CENTER;
+}
+.btn-qty-dec:hover {
+    -fx-background-color: #FFCDD2;
+}
+.btn-qty-dec:pressed {
+    -fx-background-color: #EF9A9A;
+}
+
+.btn-qty-inc {
+    -fx-background-color: #E8F5E9;
+    -fx-text-fill: #2E7D32;
+    -fx-font-size: 18px;
+    -fx-font-weight: bold;
+    -fx-background-radius: 10;
+    -fx-min-width: 34;
+    -fx-min-height: 34;
+    -fx-max-width: 34;
+    -fx-max-height: 34;
+    -fx-cursor: hand;
+    -fx-padding: 0 0 2 0;
+    -fx-alignment: CENTER;
+}
+.btn-qty-inc:hover {
+    -fx-background-color: #C8E6C9;
+}
+.btn-qty-inc:pressed {
+    -fx-background-color: #A5D6A7;
+}
+
+.lbl-qty-val {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-text-fill: #1E2A22;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER;
+    -fx-pref-width: 44;
+    -fx-max-width: 44;
+    -fx-padding: 0;
+}
+.lbl-qty-val:focused {
+    -fx-background-color: #FAF9F6;
+    -fx-border-color: #D3E0D8;
+    -fx-border-radius: 6;
+    -fx-background-radius: 6;
+}
+
+/* ── Daily Sales Button ──────────────────────────────────── */
+.btn-sales {
+    -fx-background-color: #FAF9F6;
+    -fx-text-fill: #005C42;
+    -fx-border-color: #D3E0D8;
+    -fx-border-width: 1.5;
+    -fx-border-radius: 100;
+    -fx-background-radius: 100;
+    -fx-font-size: 13.5px;
+    -fx-font-weight: 600;
+    -fx-padding: 11 22 11 22;
+    -fx-cursor: hand;
+}
+.btn-sales:hover {
+    -fx-background-color: #E2ECE9;
+    -fx-border-color: #008060;
+}
+.btn-sales:pressed {
+    -fx-background-color: #C2E2D6;
+}
+
+/* ── Inline Toggle Password Button ───────────────────────── */
+.btn-toggle-password {
+    -fx-background-color: transparent;
+    -fx-text-fill: #8E9F94;
+    -fx-font-size: 16px;
+    -fx-cursor: hand;
+    -fx-padding: 0 14 0 0;
+}
+.btn-toggle-password:hover {
+    -fx-text-fill: #008060;
+}
+
+
