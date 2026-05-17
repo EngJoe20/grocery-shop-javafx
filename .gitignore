@@ -1,0 +1,32 @@
+# Maven Target directory
+target/
+
+# IDE files
+.idea/
+*.iml
+*.iws
+*.ipr
+.project
+.classpath
+.settings/
+
+# Compiled class files
+*.class
+
+# Log files
+*.log
+
+# Runtime and generated files
+receipt.txt
+dependency-reduced-pom.xml
+
+# Installers and build outputs
+installer_output/
+installer_assets/*.jar
+installer_assets/*.exe
+
+# OS-generated files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+.DS_Store
